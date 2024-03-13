@@ -19,7 +19,7 @@ services:
       riscv32-unknown-elf-gcc
       -march=rv32i
       -mabi=ilp32
-      -o /work/hello.o
+      -o /work/hello
       /work/hello.c
     depends_on: 
       - riscv-assembly
@@ -31,6 +31,6 @@ services:
       riscv32-unknown-elf-objdump
       -D
       -l
-      /work/hello.o
+      /work/hello
     depends_on: 
       - riscv-compile
